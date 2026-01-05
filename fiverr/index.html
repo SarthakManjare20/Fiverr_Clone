@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 1400px;
+        }
+        img{
+            width: 89px;
+        }
+        span{
+            padding-left:650px;
+        }
+        .space{
+            text-decoration: none;
+            gap: 103px;
+            color: black;
+            font-weight: bolder;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            transition: 0.25s ease;
+            padding: 15px;
+
+        }
+        .space:hover{
+            color: rgb(70, 211, 98);
+        }
+        .join{
+            color: rgb(76, 213, 76);
+            background-color: white;
+            border: none;
+            border: 2px solid rgb(70, 211, 98);
+            cursor: pointer;
+            font-weight: bolder;
+            border-radius: 4px;
+            padding: 7px 10px 7px 10px;
+            margin-left: 15px;
+            transition: 0.25s ease;
+        }
+        .join:hover{
+            background-color: rgb(70, 211, 98);
+            color: white;
+        }
+        .nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            height: 70px;
+            border-bottom: 1px solid gray;
+        }
+        .search{
+            height: 400px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(6, 61, 0);
+            margin-top: 40px;
+            border-radius: 15px;
+            
+        }
+        .text{
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+        }
+        .text1{
+            font-size: 64px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .text2{
+            font-size: 64px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .text2 i{
+            color: antiquewhite;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .butt{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border-radius: 9px;
+            margin-top: 40px;
+            padding: 8px 10px;
+        }
+        .search input{
+            font-size: 17px;
+            height: 50px;
+            width: 470px;
+            border-radius: 9px;
+            background: none;
+            border: none;
+            outline: none;
+        }
+        .mag{
+            transition: 0.25s ease;
+            background-color: rgb(6, 61, 0);
+            color: white;
+            border: none;
+            width: 52px;
+            height: 50px;
+            border-radius: 9px;
+            cursor: pointer;
+        }
+        .mag:hover{
+            background-color: rgb(41, 136, 60);
+            color: white;
+            
+        }
+
+        .mag img{
+            width: 25px;
+        }
+        .type{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 220px;
+            justify-content: space-evenly;
+            /* padding: 25px 0px; */
+
+        }
+        .opbox{
+            display: flex;
+            flex-direction: column;
+            height: 140px;
+            width: 140px;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 1px 1px 9px 1px rgb(198, 198, 198);
+            transition: 0.5s ease;
+
+        }
+        .opbox:hover{
+            background-image: radial-gradient(rgb(161, 255, 187), rgb(221, 255, 230), rgb(255, 255, 255));
+            height: 160px;
+            width: 160px;
+        }
+        .opbox img{
+            margin: 14px;
+            width: 33px;
+        }
+        .opbox p{
+            margin: 14px;
+            font-size: 16px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        .pophead{
+            font-weight: lighter;
+            font-size: 45px;
+            margin-top: 25px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .colorimg{
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+        .cobox{
+            width: 190px;
+            height: 245px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.4s ease;
+        }
+        .cobox:hover{
+            filter: brightness(1.1);
+            box-shadow: 1px 1px 9px 2px rgb(95, 95, 95);
+        }
+        .space1{
+            width: 100%;
+            height: 70px;
+            margin-top: 20px;
+            /* margin: 25px 0px; */
+            /* background-color: rgb(87, 87, 87); */
+        }
+        .cobox p{
+            font-size: 23px;
+            color: white;
+            margin-left: 15px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .cobox img{
+            width: 174px;
+            border-radius: 11px;
+
+        }
+
+        .col1{
+            background-color: rgb(11, 155, 11);
+        }
+        .col2{
+            background-color: rgb(226, 103, 54);
+        }
+        .col3{
+            background-color: rgb(2, 62, 13);
+        }
+        .col4{
+            background-color: rgb(102, 18, 52);
+        }
+        .col5{
+            background-color: rgb(137, 130, 29);
+        }
+        .col6{
+            background-color: rgb(77, 6, 6);
+        }
+
+        .probox{
+            display: flex;
+            height: 600px;
+            width: 100%;
+            margin-top: 20px;
+            background-color: rgb(226, 255, 244);
+            border-radius: 15px;
+        }
+
+        .proleft{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .proright{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .proright img{
+            width: 550px;
+        }
+        .subleft{
+            margin: 25px 60px;
+        }
+        .prologo img{
+            width: 130px;
+            
+        }
+        .prohead p{
+            font-size: 53px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .prohead p i{
+            font-style: normal;
+            color: rgb(0, 134, 58);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .prodesc img{
+            width: 23px;
+            margin-top: 23px;
+            margin-bottom: 5px;
+        }
+        .prodesc p{
+            font-size: 20px;
+        }
+        .probutt button{
+            font-size: 20px;
+            padding: 10px 15px;
+            background-color: black;
+            color: white;
+            border: none;
+            outline: none;
+            border-radius: 7px;
+            margin-top: 25px;
+            cursor: pointer;
+            transition: 0.25s ease;
+           
+        }
+        .probutt button:hover{
+            background-color: rgb(0, 134, 58);
+        
+        }
+        .bottomName{
+            font-size: 43px;
+            margin-top: 35px;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+            color: rgb(70, 70, 70);
+        }
+        .bottomName2{
+            color: rgb(70, 70, 70);
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        .videobox video{
+            object-fit: cover;
+            width: 100%;
+            height: 600px;
+            border-radius: 15px;
+            margin-top: 35px;
+        }
+        .imagei{
+            font-size: 31px;
+            margin-top: 35px;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+            color: rgb(30, 30, 30);
+        }
+        .box5{
+            width: 100%;
+            height: 220px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .square{
+            width: 240px;
+            height: 180px;
+            border-radius: 19px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 1px 1px 7px 1px rgb(206, 206, 206);
+        }
+        .space3{
+            height: 100px;
+        }
+        .square p{
+            font-size: 15px;
+            text-align: center;
+            color: rgb(27, 27, 27);
+            font-weight: bold;
+            transition: 0.25s ease;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .square:hover{
+            box-shadow: 1px 1px 15px 4px rgb(206, 206, 206);
+        }
+        .gallhead{
+            font-size: 43px;
+            margin-top: 35px;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+            color: rgb(70, 70, 70);
+
+        }
+        .gallery1{
+            width: 100%;
+            display: flex;
+            margin-top: 40px;
+            justify-content: space-between;
+
+        }
+        .gcol{
+            width: 23.5%;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .gcol img{
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 1px 1px 7px 2px rgb(200, 200, 200);
+            cursor: pointer;
+            transition: 0.1s ease;
+        }
+        .gcol img:hover{
+            filter: brightness(0.8);
+            
+        }
+        .joinfiv{
+            background-color: rgb(68, 10, 20);
+            width: 100%;
+            margin-top: 80px;
+            height: 230px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .joinfiv p{
+            font-size: 65px;
+            color: white;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .joinfiv p i{
+            color: rgb(255, 119, 0);
+            font-family: 'Times New Roman', Times, serif;
+        }
+    .joinfiv button{
+        font-size: 18px;
+        padding: 10px 12px;
+        border-radius: 7px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: 0.25s ease;
+    }
+
+    .joinfiv button:hover{
+        filter: brightness(0.9);
+    }
+    
+    .links{
+        width: 100%;
+        height: 625px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 70px;
+        border-top: 0.5px solid rgb(135, 135, 135);
+        border-bottom: 0.5px solid rgb(135, 135, 135);
+    }
+    .collink{
+        height: 100%;
+        width: 20%;
+        font-size: 20px;
+        line-height: 45px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+    }
+
+    .collink ul{
+        list-style-type: none;
+    }
+    .collink ul a{
+        text-decoration: none;
+        color: rgb(98, 98, 98); 
+    }
+    .collink ul a:hover{
+        text-decoration: underline;
+        color: black;
+    }
+
+    .collink p{
+        margin-top: 40px;
+    }
+    .footer{
+        height: 80px;
+        width: 100%;
+        display: flex;
+    }
+    .foleft{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .foleft p{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(132, 132, 132);
+        margin-top: 3px;
+    }
+    
+    .foright{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content:flex-end;
+        gap: 20px;
+    }
+    .foright img{
+        height: 30px;
+        width: 30px;
+    }
+    .lenglish{
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: none;
+        color: rgb(168, 168, 168);
+    }
+    .money{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        gap: 5px;
+    }
+    .money img{
+        height: 15px;
+        width: 15px;
+        margin-top: 4px;
+        filter: brightness(1.59);
+    }
+    .money{
+        font-size: 17px;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: none;
+        color: rgb(168, 168, 168);
+    }
+    .foright a img{
+        transition: 0.2s ease;
+    }
+    .foright a img:hover{
+        border: 2px solid rgb(91, 91, 91);
+        border-radius: 30px;
+        box-shadow: 1px 1px 10px 1px rgb(149, 149, 149);
+    }
+    
+
+
+          
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+    <div class="nav">
+        <img src="fiverrlogo.png" alt="">
+        <span class="op">
+            <a class="space" href="http://">Fiverr Pro</a>
+            <a class="space" href="http://">Explore</a>
+            <a class="space" href="http://">English</a>
+            <a class="space" href="http://">Become a Seller</a>
+            <a class="space" href="http://">Sign</a>
+            <button class="join">Join</button>
+        </span>
+    </div>
+    <div class="search">
+            <p class="text text1">Scale your professional </p>
+            <p class="text text2">workforce with <i>&nbsp;freelancers</i> </p>
+            <div class="butt">
+                <input type="text" placeholder="Search for any service">
+                <button class="mag"><img src="search icon.png" alt=""></button>
+            </div>
+    </div>
+    <div class="type">
+        <div class="opbox">
+            <img src="prog.webp" alt="">
+            <p>Programming <br> & Tech</p>
+        </div>
+        <div class="opbox">
+            <img src="graphic.png" alt="">
+            <p>Graphics <br>& Design</p>
+        </div>
+        <div class="opbox">
+            <img src="digital.png" alt="">
+            <p>Degital <br> Marketing</p>
+        </div>
+        <div class="opbox">
+            <img src="transletor.png" alt="">
+            <p>Writing <br>& Translation</p>
+        </div>
+        <div class="opbox">
+            <img src="video.webp" alt="">
+            <p>Video <br>& Animation</p>
+        </div>
+        <div class="opbox">
+            <img src="ai.png" alt="">
+            <p>AI Services</p>
+        </div>
+        <div class="opbox">
+            <img src="music.webp" alt="">
+            <p>Music & Audio</p>
+        </div>
+        <div class="opbox">
+            <img src="consultence.jpg" alt="">
+            <p>Consulting</p>
+        </div>
+    </div>
+
+    <h1 class="pophead">Popular Services</h1>
+
+    <div class="colorimg">
+        <div class="cobox col1">
+            <div class="space1">
+                <p>Website <br>Development</p>
+            </div>
+            <img src="col1.webp" alt="">
+        </div>
+        <div class="cobox col2">
+            <div class="space1">
+                <p>Logo Design</p>
+            </div>
+            <img src="col2.webp" alt="">
+        </div>
+        <div class="cobox col3">
+            <div class="space1">
+                <p>SEO</p>
+            </div>
+            <img src="col3.webp" alt="">
+        </div>
+        <div class="cobox col4">
+            <div class="space1">
+                <p>Architecture& <br>Interior Design</p>
+            </div>
+            <img src="col4.webp" alt="">
+        </div>
+        <div class="cobox col5">
+            <div class="space1">
+                <p>Social Media <br>Marketing</p>
+            </div>
+            <img src="col5.webp" alt="">
+        </div>
+        <div class="cobox col6">
+            <div class="space1">
+                <p>Voice Over</p>
+            </div>
+            <img src="col5.webp" alt="">    
+        </div>
+    </div>
+    <div class="probox">
+        <div class="proleft">
+            <div class="subleft">
+            <div class="prologo">
+                <img src="logopro.png" alt="">
+            </div>
+            <div class="prohead">
+                <p>The <i>premium</i> freelance solution for businesses</p>
+            </div>
+            <div class="prodesc">
+                <img src="tick.png" alt="">
+                <p><b>Dedicated hiring experts</b><br>Count on an account manager to find you the right talent and see to your project's every need.</p>
+                <img src="tick.png" alt="">
+                <p><b>Satisfaction guarantee</b><br>Order confidently, with guaranteed refunds for less-than-satisfactory deliveries.</p>
+            </div>
+            <div class="probutt">
+                <button>Try Now</button>
+            </div>
+        </div>
+        </div>
+        <div class="proright">
+            <img src="fiverr-pro.webp" alt="">
+
+        </div>
+    </div>
+
+    <h1 class="bottomName">What success on Fiverr looks like</h1>
+    <h2 class="bottomName2">Vontélle Eyewear turns to Fiverr freelancers to bring their vision to life.</h2>
+    <div class="videobox">
+        <video src="video.mp4" controls></video>
+    </div>
+    <h1 class="imagei">Vontélle’s go-to services</h1>
+
+    <div class="box5">
+        <div class="square sq1">
+            <div class="space3">
+                <img src="i1.webp" alt="">
+            </div>
+            <p>3D Industrial Design</p>
+        </div>
+        <div class="square sq2">
+            <div class="space3">
+                <img src="i2.webp" alt="">
+            </div>
+            <p>E-commerce <br>Website Development</p>
+        </div>
+        <div class="square sq2">
+            <div class="space3">
+                <img src="i3.webp" alt="">
+            </div>
+            <p>Email Marketing</p>
+        </div>
+        <div class="square sq3">
+            <div class="space3">
+                <img src="i3.webp" alt="">
+            </div>
+            <p>Press Releases</p>
+        </div>
+        <div class="square sq4">
+            <div class="space3">
+                <img src="i4.webp" alt="">
+            </div>
+            <p>Logo Design</p>
+        </div>
+
+
+    </div>
+    <h1 class="gallhead">Made on Fiverr</h1>
+
+    <div class="gallery1">
+        <div class="gcol">
+            <img src="gimg1.jpg" alt="">
+            <img src="gimg5.webp" alt="">
+            <img src="gimg9.jpg" alt="">
+            <img src="gimg13.webp" alt="">
+        </div>
+        <div class="gcol">
+            <img src="gimg2.webp" alt="">
+            <img src="gimg6.webp" alt="">
+            <img src="gimg10.webp" alt="">
+            <img src="gimg14.webp" alt="">
+        </div>
+        <div class="gcol">
+            <img src="gimg3.webp" alt="">
+            <img src="gimg7.webp" alt="">
+            <img src="gimg11.webp" alt="">
+            <img src="gimg15.jpg" alt="">
+            <img src="gimg17.webp" alt="">
+        </div>
+        <div class="gcol">
+            <img src="gimg4.webp" alt="">
+            <img src="gimg8.jpg" alt="">
+            <img src="gimg12.webp" alt="">
+            <img src="gimg16.webp" alt="">
+        </div>
+    </div>
+    <div class="joinfiv">
+        <p>Freelance services at your <i> fingertips</i></p>
+        <button>Join Fiverr</button>
+    </div>
+
+    <div class="links">
+        <div class="collink">
+            <p><b>Categories</b></p>
+            <ul>
+                <li><a href="">Graphics & Design</a></li>
+                <li><a href="">Degital Marketing</a></li>
+                <li><a href="">Writing & Translation</a></li>
+                <li><a href="">Video & Animation</a></li>
+                <li><a href="">Music & Audio</a></li>
+                <li><a href="">Programming & Tech</a></li>
+                <li><a href="">AI Services</a></li>
+                <li><a href="">Consulting</a></li>
+                <li><a href="">Photography</a></li>
+                <li><a href="">Finance</a></li>
+                <li><a href="">Personal Growth & Hobbies</a></li>
+            </ul>
+        </div>
+        <div class="collink">
+            <p><b>For Clients</b></p>
+            <ul>
+                <li><a href="">How Fiverr Works</a></li>
+                <li><a href="">Customer Success Stories</a></li>
+                <li><a href="">Trust & Safety</a></li>
+                <li><a href="">Quality Guide</a></li>
+                <li><a href="">Fiverr Learn</a></li>
+                <li><a href="">Fiverr Guides</a></li>
+                <li><a href="">Fiverr Answers</a></li>
+            </ul>
+        </div>
+        <div class="collink">
+            <p><b>For Freelancers</b></p>
+            <ul>
+                <li><a href="">Become a Fiverr Freelancer</a></li>
+                <li><a href="">Become an Agency</a></li>
+                <li><a href="">Kickstart</a></li>
+                <li><a href="">Community Hub</a></li>
+                <li><a href="">Forum</a></li>
+                <li><a href="">Events</a></li>
+            </ul>
+        </div>
+        <div class="collink">
+            <p><b>Business Solutions</b></p>
+            <ul>
+                <li><a href="">Fiverr Pro</a></li>
+                <li><a href="">Project Management Service</a></li>
+                <li><a href="">ClearVoice</a></li>
+                <li><a href="">Working Not Working</a></li>
+                <li><a href="">AutoDS</a></li>
+                <li><a href="">Fiverr Logo Maker</a></li>
+                <li><a href="">Contact Sales</a></li>
+            </ul>
+        </div>
+        <div class="collink">
+            <p><b>Company</b></p>
+            <ul>
+                <li><a href="">About Fiverr</a></li>
+                <li><a href="">Help & Support</a></li>
+                <li><a href="">Social Impact</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Terms of Service</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Partnerships</a></li>
+                <li><a href="">Creator Network</a></li>
+                <li><a href="">Affiliates</a></li>
+                <li><a href="">Invite a Friend</a></li>
+                <li><a href="">Press & News</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="foleft">
+            <img style="filter: brightness(2.0);" src="fiverrlogo.png" alt="">
+            <p>© Fiverr International Ltd. 2025</p>
+        </div>
+        <div class="foright">
+            <a href="">
+                <img style="height: 24px; width: 24px; filter: brightness(1.4);" src="ticktok.png" alt="">
+            </a>
+            <a href="">
+                <img src="instalogo.png" alt="">
+            </a>
+            <a href="">
+                <img style="height: 25px; width: 25px; filter: brightness(0.9);" src="linkdin.png" alt="">
+            </a>
+            <a href="">
+                <img style="height: 28px; width: 28px; filter: brightness(1.14);" src="facebook2.png" alt="">
+            </a>
+            <a href="">
+                <img style="height: 28px; width: 28px; filter: brightness(0.96);" src="printrest2.png" alt="">
+            </a>
+            <a href="">
+                <img style="height: 35px; width: 35px; filter: brightness(0.86);" src="x.webp" alt="">
+            </a>
+            <a class="lenglish" href="">
+                English
+            </a>
+            <a class="money" href="">
+                <img src="rs.png" alt="">
+                INR
+            </a>
+            <a href="">
+                <img src="man.png" alt="">
+            </a>
+
+        </div>
+    </div>
+
+
+
+    </div>
+</body>
+</html>
